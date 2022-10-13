@@ -5,7 +5,7 @@
 #
 # Day Eight materials: Estimation
 #
-# Load some packages:
+# Load some packages: 
 
 library(readr)
 library(htmltab)
