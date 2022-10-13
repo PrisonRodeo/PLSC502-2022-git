@@ -122,7 +122,20 @@ for(i in 1:length(N)) {    # Looping over sample sizes...
   }
 }
 
-# Now let's visualize those:
+# Now let's visualize those...
+#
+# Get empirical means:
+
+EMs<-apply(Out,2,FUN=mean)
+
+# Get the empirical variances:
+
+EVs<-apply(Out,2,FUN=sd)^2
+
+# Calculate the theoretical variances:
+
+Opts<-expand.grid(L,N)
+TVs<-Opts$Var1 / Opts$Var2
 
 pdf("PoissonMeanSims.pdf",10,7)
 par(mfrow=c(3,3))
@@ -134,6 +147,10 @@ for(i in 1:length(N)){
     plot(density(Out[,c]),lwd=2,xlim=c(0,15),
          main=Label,xlab="Means of X")
     abline(v=L[j],lwd=1,lty=2,col="red")
+    legend("topright",bty="n",
+           legend=c(paste0("Empirical Mean = ",round(EMs[c],4)),
+                    paste0("Theoretical Variance = ",TVs[c]),
+                    paste0("Empirical Variance = ",round(EVs[c],5))))
   }
 }
 dev.off()
