@@ -1,4 +1,4 @@
-Election,County,Office,Party,Candidate,Votes,Election Day Votes,Mail Votes,Provisional Votes
+Election,County,Office,Party,Candidate,Votes,ElectionDayVotes,MailVotes,ProvisionalVotes
 2020 Presidential Election,ADAMS,President of the United States,Democratic,"BIDEN, JOSEPH ROBINETTE JR",18207,6611,11436,160
 2020 Presidential Election,ADAMS,President of the United States,Republican,"TRUMP, DONALD J.",37523,29942,7148,433
 2020 Presidential Election,ADAMS,President of the United States,Libertarian,"JORGENSEN, JO",810,544,256,10
